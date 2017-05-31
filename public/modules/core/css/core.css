@@ -14,9 +14,9 @@
 	border-color: #78FA89;
 }
 
-@font-face {
+@@font-face {
 	font-family: "Aleo"
-	src:url(/fonts/Aleo-Regular.otf);
+	src:url(/public/modules/core/fonts/Aleo-Regular.otf);
 }
 
 #main-nav {
@@ -61,7 +61,7 @@
 }
 
 #title-font {
-	font-family: "Aleo";
+	font-family: "Aleo", Verdana, Geneva, sans-serif;
 }
 
 #submit-button {
@@ -102,4 +102,47 @@
 
 #custom-search-input .glyphicon-search{
     font-size: 23px;
+}
+
+.search-section {
+	padding-bottom: 150px;
+	padding-top: 40px;
+	text-align: center;
+}
+
+.search-container {
+  width: 100%;
+   margin: 0;
+   padding: 0;
+   background-color:#000
+   top: 0;
+   left: 0;
+
+}
+
+.title-text{
+	font-family: "Aleo", Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 37px;
+}
+
+.subsection-title {
+	font-family: Arial, Geneva, sans-serif;
+	font-size: 24px;
+	border-bottom-width: 2px;
+ 	border-bottom-style: solid;
+ 	border-bottom-color: black;
+
+}
+
+
+
+.img {
+	position: absolute;
+    text-align: center; /*for centering images inside*/
+}
+#pop-img {
+    width: 300px; /*set the width or max-width*/
+    height: auto; /*this makes sure to maintain the aspect ratio*/
+    padding: 10px 8px 8px 5px;
 }
