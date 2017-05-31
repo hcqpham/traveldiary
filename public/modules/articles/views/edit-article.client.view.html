@@ -1,6 +1,6 @@
 <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
 	<div class="page-header">
-		<h1>Edit Article</h1>
+		<h1>Edit Journal Entry</h1>
 	</div>
 	<div class="col-md-12">
 		<form name="articleForm" class="form-horizontal" data-ng-submit="update(articleForm.$valid)" novalidate>
@@ -52,13 +52,13 @@
 					<label class="control-label" for="lon">Longitude</label>
 					<div class="controls">
 						<textarea name="content" data-ng-model="article.lon" id="content" class="form-control" cols="10" rows="1" placeholder="Longitude" required></textarea>
-						
+
 					</div>
 
 					<div ng-show="submitted && articleForm.content.$invalid" class="help-block">
 						<p ng-show="articleForm.content.$error.required" class="text-danger">Longitude is required</p>
 					</div>
-				</div>				
+				</div>
 
 
 
