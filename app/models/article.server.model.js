@@ -18,7 +18,7 @@ var ArticleSchema = new Schema({
 		type: String,
 		default: '',
 		trim: true,
-		required: 'Title cannot be blank'
+		required: 'Title cannot be blank. Input title then try again.'
 	},
 	content: {
 		type: String,
@@ -29,11 +29,13 @@ var ArticleSchema = new Schema({
 		type: Number,
 		default: 0,
 		trim: true
+
 	},
 	lon:{
 		type: Number,
 		default: 0,
 		trim: true
+
 	},
 	city: {
 		type: String,
