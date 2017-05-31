@@ -15,14 +15,16 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 				category: this.category
 				///
 			});
+
+			//sets location on map
 			article.$save(function(response) {
 				$location.path('articles/' + response._id);
 
 				$scope.title = '';
 				$scope.content = '';
 				///
-				$scope.lon = 0;
-				$scope.lat = 0;
+				$scope.lon = 39.500;
+				$scope.lat = -98.350;
 				///
 
 			}, function(errorResponse) {
@@ -65,6 +67,12 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 				articleId: $stateParams.articleId
 			});
 		};
+
+		$scope.findOne = function() {
+			$scope.article = Articles.city({
+				articleId: $stateParams.articleId
+			});
+		}
 
 
 

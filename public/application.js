@@ -10,6 +10,9 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 	}
 ]);
 
+//Configuring angular routing 
+
+
 //Then define the init function for starting up the application
 angular.element(document).ready(function() {
 	//Fixing facebook bug with redirect

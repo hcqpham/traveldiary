@@ -7,5 +7,6 @@ angular.module('articles').run(['Menus',
 		Menus.addMenuItem('topbar', 'Journals', 'articles', 'dropdown', '/articles(/create)?');
 		Menus.addSubMenuItem('topbar', 'articles', 'All Journals', 'articles');
 		Menus.addSubMenuItem('topbar', 'articles', 'New Journal', 'articles/create');
+
 	}
 ]);

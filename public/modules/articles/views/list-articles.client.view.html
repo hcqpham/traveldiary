@@ -2,9 +2,62 @@
 	<div class="page-header">
 		<h1>Travel the World</h1>
 		<p> View all of the entries that have been listed all throughout the world! Filter through category or city.<br>
-		<li> start on search bar </li><br>
-	 	<li> maps don't need to really be reorganized here so this actually might work </li></p>
 	</div>
+	<!-- Look for City Manually -->
+	<div class="form-group">
+ <label for="favcity">Search by City</label>
+ <input type="text" class="form-control" id="favcity" placeholder="Enter in your Desired City" ng-model="formData.favcity">
+	</div>
+	<p>OR</p>
+	<label for="favcity">Search by User</label>
+	<input type="text" class="form-control" id="favcity" placeholder="Enter in your Desired City" ng-model="formData.favcity">
+	 </div>
+<br>
+	<!-- Checklist for Category Filtering. Note ng-true-value which translates check values into explicit category strings -->
+			 <label>Category</label>
+			 <div class="form-group">
+					 <label class="checkbox-inline">
+							 <input type="checkbox" name="optionsRadios" id="checkfood" value="Food Conquistadors" ng-model="formData.male" ng-true-value = "'Male'">
+							 Food Conquistadors
+					 </label>
+					 <label class="checkbox-inline">
+							 <input type="checkbox" name="optionsRadios" id="checknature" value="Nature Lover" ng-model="formData.female" ng-true-value="'Female'">
+							 Nature Lover
+					 </label>
+					 <label class="checkbox-inline">
+							 <input type="checkbox" name="optionsRadios" id="checknight" value="Nightlife" ng-model="formData.other" ng-true-value="Nightlife'">
+							Nightlife
+					 </label>
+					 <label class="checkbox-inline">
+							 <input type="checkbox" name="optionsRadios" id="checkstudent" value="College Student" ng-model="formData.other" ng-true-value="'College Student'">
+							 College Student
+					 </label>
+					 <label class="checkbox-inline">
+							 <input type="checkbox" name="optionsRadios" id="checkart" value="Modern Art Curator" ng-model="formData.other" ng-true-value="'Modern Art Curator'">
+							 Modern Art Curator
+					 </label>
+			 </div>
+
+	<!-- submit button -->
+	<div class="form-group"><br><br>
+		<input type="submit" class="btn btn-default">
+	</div>
+	<div data-ng-show="error" class="text-danger">
+		<strong data-ng-bind="error"></strong>
+	</div>
+</fieldset>
+</form>
+</div>
+
+<!-- Query button. Note that its tied to queryUsers() function from queryCtrl.  -->
+<button type="submit" class="btn btn-danger btn-block" ng-click="queryUsers()">Search</button>
+</form>
+</div>
+
+<!-- Footer panel for displaying count. Note how it will only display if queryCount is greater than 0 -->
+<div ng-show="queryCount>0" class="panel-footer">
+<p class="text-center">Woo! Found {{queryCount}} entries for your search in this area and category. Click on the pins for more information.</p>
+</div>
 
 	<div class="list-group">
 

@@ -29,13 +29,11 @@ var ArticleSchema = new Schema({
 		type: Number,
 		default: 0,
 		trim: true
-
 	},
 	lon:{
 		type: Number,
 		default: 0,
 		trim: true
-
 	},
 	city: {
 		type: String,
