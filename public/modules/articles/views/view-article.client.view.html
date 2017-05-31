@@ -8,6 +8,8 @@
   <!-- a initial position must be set because it will prompt the users current geolocation and set it to that -->
 </map>
 	<div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
+
+<!-- these provide the edit and button icons on view -->
 		<a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
@@ -16,7 +18,7 @@
 		</a>
 	</div>
 
-
+<!-- mini information about date published and by whom -->
 	<small>
 		<em class="text-muted">
 			Posted on
@@ -26,12 +28,15 @@
 		</em>
 	</small>
 
-
+<!-- publish information recorded -->
+	<br>
+	<br>
+	Location of Travels:
+	<p class="lead" data-ng-bind="article.city"></p>
+	Category of Journal Entry:
+	<p class="lead" data-ng-bind="article.category"></p>
 	<p class="lead" data-ng-bind="article.content"></p>
-	Latitude: 
-	<p class="lead" data-ng-bind="article.lat"></p>
-	Longitude: 
-	<p class="lead" data-ng-bind="article.lon"></p>
+
 
 
 

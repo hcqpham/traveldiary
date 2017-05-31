@@ -10,7 +10,9 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 				content: this.content,
 				///
 				lon: this.lon,
-				lat: this.lat
+				lat: this.lat,
+				city: this.city,
+				category: this.category
 				///
 			});
 			article.$save(function(response) {
@@ -73,7 +75,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 
 
   			$scope.$watch('article.lat + article.lon',function(newVal,oldVal){
-  		  	
+
   		  	if(newVal === oldVal){
     		return;
   				}

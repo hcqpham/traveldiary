@@ -12,9 +12,10 @@
   				<!-- a initial position must be set because it will prompt the users current geolocation and set it to that -->
 				</map>
 
-				<!-- title -->
+				<!-- Text field required for Title -->
+
 				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.title.$invalid}">
-					<label class="control-label" for="title">Title</label>
+					<label class="control-label" for="title">Title of Blog</label>
 					<div class="controls">
 						<input name="title" type="text" data-ng-model="article.title" id="title" class="form-control" placeholder="Title" required>
 					</div>
@@ -23,9 +24,9 @@
 					</div>
 				</div>
 
-				<!-- content -->
+				<!-- Text field required for content -->
 				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.content.$invalid}">
-					<label class="control-label" for="content">Content</label>
+					<label class="control-label" for="content">Write out your content here</label>
 					<div class="controls">
 						<textarea name="content" data-ng-model="article.content" id="content" class="form-control" cols="10" rows="1" placeholder="Content" required></textarea>
 					</div>
@@ -34,7 +35,7 @@
 						<p ng-show="articleForm.content.$error.required" class="text-danger">Content is required</p>
 					</div>
 				</div>
-				<!-- lat -->
+				<!-- Text field required for lat -->
 				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.content.$invalid}">
 					<label class="control-label" for="lat">Latitude</label>
 					<div class="controls">
@@ -46,7 +47,7 @@
 					</div>
 				</div>
 
-				<!-- lon -->
+				<!-- Text field required for lon -->
 
 				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.content.$invalid}">
 					<label class="control-label" for="lon">Longitude</label>
@@ -60,10 +61,58 @@
 					</div>
 				</div>
 
+				<!-- Input City (manually) -->
+					<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.city.$invalid}">
+					<label class="control-label" for="city">City Travelled?</label>
+					<div class="controls">
+						<textarea name="content" data-ng-model="article.city" id="content" class="form-control" cols="10" rows="1" placeholder="City" required></textarea>
+					</div>
 
+					<div ng-show="submitted && articleForm.city.$invalid" class="help-block">
+						<p ng-show="articleForm.city.$error.required" class="text-danger">City is required</p>
+					</div>
+				</div>
 
+				<!-- Radio button for category -->
+				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.category.$invalid}">
+					<label class="control-label" for="category">Category</label>
+					<br>
+				 <div class="radio">
+													 <label>
+															 <input type="radio" name="optionsRadios" id="radiofood" value="Food Conquistadors" ng-model="article.category">
+															 Food Conquistadors
+													 </label>
+											 </div>
+											 <div class="radio" required>
+													 <label>
+															 <input type="radio" name="optionsRadios" id="radionature" value="Nature Lover" ng-model="article.category">
+															 Nature Lover
+													 </label>
+											 </div>
+											 <div class="radio">
+													 <label>
+															 <input type="radio" name="optionsRadios" id="radionight" value="Nightlife" ng-model="article.category">
+															 Nightlife
+													 </label>
+													 </div>
+													 <div class="radio">
+															<label>
+																	<input type="radio" name="optionsRadios" id="radiostudent" value="College Student" ng-model="article.category">
+																	College Student
+															</label>
+											 </div>
+											 <div class="radio">
+													 <label>
+															 <input type="radio" name="optionsRadios" id="radioart" value="Modern Art Curator" ng-model="article.category">
+															 Modern Art Curator
+													 </label>
+										</div>
 
-				<!--  -->
+										<div ng-show="submitted && articleForm.category.$invalid" class="help-block">
+											<p ng-show="articleForm.category.$error.required" class="text-danger">Category is required</p>
+										</div>
+									</div>
+				<!-- Submit Button -->
 
 
 				<div class="form-group">

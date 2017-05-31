@@ -1,6 +1,6 @@
 <section data-ng-controller="ArticlesController">
 	<div class="page-header">
-		<h1>New Article</h1>
+		<h1>Create A Journal Entry</h1>
 	</div>
 	<div class="col-md-12">
 		<form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
@@ -22,12 +22,11 @@
 				<div class="form-group">
 					<label class="control-label" for="content">Content</label>
 					<div class="controls">
-						<textarea name="content" data-ng-model="content" id="content" class="form-control" cols="10" rows="1" placeholder="Content"></textarea>
+						<textarea name="content" data-ng-model="content" id="content" class="form-control" cols="10" rows="7" placeholder="Content"></textarea>
 					</div>
 				</div>
 
 				<!-- lat -->
-
 				<div class="form-group">
 					<label class="control-label" for="content">Latitude</label>
 					<div class="controls">
@@ -43,12 +42,60 @@
 					</div>
 				</div>
 
+				<!-- Input City (manually) -->
+					<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.city.$invalid}">
+					<label class="control-label" for="city">City Travelled?</label>
+					<div class="controls">
+						<textarea name="content" data-ng-model="article.city" id="content" class="form-control" cols="10" rows="1" placeholder="City" required></textarea>
+					</div>
 
+					<div ng-show="submitted && articleForm.city.$invalid" class="help-block">
+						<p ng-show="articleForm.city.$error.required" class="text-danger">City is required</p>
+					</div>
+				</div>
 
+				<!-- Radio button for category -->
+				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.category.$invalid}">
+					<label class="control-label" for="category">Category</label>
+					<br>
+				 <div class="radio">
+													 <label>
+															 <input type="radio" name="optionsRadios" id="radiofood" value="Food Conquistadors" ng-model="article.category">
+															 Food Conquistadors
+													 </label>
+											 </div>
+											 <div class="radio" required>
+													 <label>
+															 <input type="radio" name="optionsRadios" id="radionature" value="Nature Lover" ng-model="article.category">
+															 Nature Lover
+													 </label>
+											 </div>
+											 <div class="radio">
+													 <label>
+															 <input type="radio" name="optionsRadios" id="radionight" value="Nightlife" ng-model="article.category">
+															 Nightlife
+													 </label>
+													 </div>
+													 <div class="radio">
+															<label>
+																	<input type="radio" name="optionsRadios" id="radiostudent" value="College Student" ng-model="article.category">
+																	College Student
+															</label>
+											 </div>
+											 <div class="radio">
+													 <label>
+															 <input type="radio" name="optionsRadios" id="radioart" value="Modern Art Curator" ng-model="article.category">
+															 Modern Art Curator
+													 </label>
+										</div>
 
+										<div ng-show="submitted && articleForm.category.$invalid" class="help-block">
+											<p ng-show="articleForm.category.$error.required" class="text-danger">Category is required</p>
+										</div>
+									</div>
 
-
-				<div class="form-group">
+				<!-- submit button -->
+				<div class="form-group"><br><br>
 					<input type="submit" class="btn btn-default">
 				</div>
 				<div data-ng-show="error" class="text-danger">
