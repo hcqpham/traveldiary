@@ -57,6 +57,10 @@
 		var user = {{ user | json | safe }};
 	</script>
 
+	<!-- Embedding WYSIWYG Editor -->
+	<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+
 	<!--Application JavaScript Files-->
 	{% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>{% endfor %}
 

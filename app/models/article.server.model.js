@@ -51,8 +51,5 @@ var ArticleSchema = new Schema({
 	}
 });
 
-// Indexes this schema in 2dsphere format (critical for running proximity searches)
-ArticleSchema.index({location: '2dsphere'});
-
 //Sets the mongoDB collection to be used as "Article"
 mongoose.model('Article', ArticleSchema);

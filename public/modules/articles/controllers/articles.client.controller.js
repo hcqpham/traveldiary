@@ -68,14 +68,6 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 			});
 		};
 
-		$scope.findOne = function() {
-			$scope.article = Articles.city({
-				articleId: $stateParams.articleId
-			});
-		}
-
-
-
 		// $watch to add a the marker
   		$scope.$on('mapInitialized', function(event,map) {
 

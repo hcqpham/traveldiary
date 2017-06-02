@@ -1,10 +1,10 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
 	<div class="page-header">
-		<h1>Travel the World</h1>
-		<p> View all of the entries that have been listed all throughout the world! Filter through category or city.<br>
+		<h1>Develop your Wanderlust - Map Overview</h1>
+		<p> Click on any pin located thorughout the world to view what others have done and travelled around the world!<br>
 	</div>
 	<!-- Look for City Manually -->
-	<div class="form-group">
+<!--	<div class="form-group">
  <label for="favcity">Search by City</label>
  <input type="text" class="form-control" id="favcity" placeholder="Enter in your Desired City" ng-model="formData.favcity">
 	</div>
@@ -12,9 +12,9 @@
 	<label for="favcity">Search by User</label>
 	<input type="text" class="form-control" id="favcity" placeholder="Enter in your Desired City" ng-model="formData.favcity">
 	 </div>
-<br>
+<br> -->
 	<!-- Checklist for Category Filtering. Note ng-true-value which translates check values into explicit category strings -->
-			 <label>Category</label>
+			 <!-- <label>Category</label>
 			 <div class="form-group">
 					 <label class="checkbox-inline">
 							 <input type="checkbox" name="optionsRadios" id="checkfood" value="Food Conquistadors" ng-model="formData.male" ng-true-value = "'Male'">
@@ -36,28 +36,28 @@
 							 <input type="checkbox" name="optionsRadios" id="checkart" value="Modern Art Curator" ng-model="formData.other" ng-true-value="'Modern Art Curator'">
 							 Modern Art Curator
 					 </label>
-			 </div>
+			 </div> -->
 
 	<!-- submit button -->
-	<div class="form-group"><br><br>
-		<input type="submit" class="btn btn-default">
+	<!--	<div class="form-group"><br><br>
+	<input type="submit" class="btn btn-default">
 	</div>
 	<div data-ng-show="error" class="text-danger">
 		<strong data-ng-bind="error"></strong>
 	</div>
 </fieldset>
 </form>
-</div>
+</div> -->
 
 <!-- Query button. Note that its tied to queryUsers() function from queryCtrl.  -->
-<button type="submit" class="btn btn-danger btn-block" ng-click="queryUsers()">Search</button>
+<!-- <button type="submit" class="btn btn-danger btn-block" ng-click="queryUsers()">Search</button>
 </form>
-</div>
+</div> -->
 
 <!-- Footer panel for displaying count. Note how it will only display if queryCount is greater than 0 -->
-<div ng-show="queryCount>0" class="panel-footer">
+<!--<div ng-show="queryCount>0" class="panel-footer">
 <p class="text-center">Woo! Found {{queryCount}} entries for your search in this area and category. Click on the pins for more information.</p>
-</div>
+</div> -->
 
 	<div class="list-group">
 
@@ -69,21 +69,6 @@
   		</marker>
 
 		</map>
-
-		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
-			<small>
-				<em class="text-muted">
-					Posted on
-					<span data-ng-bind="article.created | date:'mediumDate'"></span>
-					by
-					<span data-ng-bind="article.user.displayName"></span>
-				</em>
-			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
-
-			<p class="list-group-item-text" data-ng-bind="article.content"></p>
-
-		</a>
 
 	</div>
 
