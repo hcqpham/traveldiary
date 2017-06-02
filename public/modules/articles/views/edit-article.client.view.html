@@ -28,7 +28,8 @@
 				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.content.$invalid}">
 					<label class="control-label" for="content">Write out your content here</label>
 					<div class="controls">
-						<textarea name="content" data-ng-model="article.content" id="content" class="form-control" cols="10" rows="1" placeholder="Content" required></textarea>
+						<textarea name="content" data-ng-model="article.content" id="content" class="form-control" cols="10" rows="10" placeholder="Content" required></textarea>
+
 					</div>
 
 					<div ng-show="submitted && articleForm.content.$invalid" class="help-block">

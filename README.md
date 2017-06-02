@@ -1,4 +1,4 @@
-## MEANjs Google Maps CRUD
+## Travel Diaries 
 
 Travel Diaries - Talk about your journey and view what others have done as well.
 

@@ -1,7 +1,7 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
 	<div class="page-header">
-		<h1>Develop your Wanderlust - Map Overview</h1>
-		<p> Click on any pin located thorughout the world to view what others have done and travelled around the world!<br>
+		<h1>Search All Entries</h1>
+		<p> View all of the entries that have been listed all throughout the world! When this will be available, you can even filter through category or city.<br>
 	</div>
 	<!-- Look for City Manually -->
 <!--	<div class="form-group">
@@ -69,6 +69,21 @@
   		</marker>
 
 		</map>
+
+		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
+			<small>
+				<em class="text-muted">
+					Posted on
+					<span data-ng-bind="article.created | date:'mediumDate'"></span>
+					by
+					<span data-ng-bind="article.user.displayName"></span>
+				</em>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
+
+			<p class="list-group-item-text" data-ng-bind="article.content"></p>
+
+		</a>
 
 	</div>
 

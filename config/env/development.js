@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/mean-maps-dev',
+	db: 'mongodb://root:password@ds151951.mlab.com:51951/meanjs',
 	app: {
-		title: 'mean_maps - Development Environment'
+		title: 'Travel Diaries'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
